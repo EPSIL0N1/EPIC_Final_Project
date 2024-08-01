@@ -2,6 +2,12 @@
 
 Welcome to EPIC - Empowering Periods In Confidence. This project aims to provide a comprehensive solution for tracking menstrual cycles, predicting period dates, and offering a supportive community and chatbot assistance for women.
 
+## Demo
+
+https://youtu.be/s91nz45Jl2w?si=cxSQHEq7RMawtOS1
+
+Click the link to watch the demo video.
+
 ## Repository Structure
 
 In this repository, you will find the following folders:
@@ -146,6 +152,14 @@ This is the chatbot.
 - Color Thief (For image analysis)
 - Ollama Embeddings
 
+#### Environment Variables
+ *Set Up Environment Variables*
+
+Create a .env file in the root directory of the project and add your API key:
+The following environment variables are required to run the project:
+
+- GROQ_API_KEY: API key for accessing Groq services.
+
 #### Requirements
 
 ```txt
@@ -181,3 +195,18 @@ This is the machine learning API for prediction.
 #### Run Command
 
 Run in a dedicated terminal.
+
+
+## Contributing
+
+We welcome contributions from the community. To contribute:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bugfix.
+3. Make your changes and commit them with descriptive messages.
+4. Push your changes to your fork.
+5. Open a pull request to the main repository.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
