@@ -1,0 +1,150 @@
+.regi-container{
+    display: flex;
+    flex: 1;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: #111;
+    overflow: hidden;
+}
+
+.regi-field {
+    display: flex;
+    width: 480px;
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 2rem;
+    flex-direction: column;
+    font-family: "Lato", sans-serif;
+    background: transparent;
+}
+
+.regi-field h2{
+    background: transparent;
+    color: white;
+    margin-bottom: 1rem;
+    font-family: "Zain", sans-serif;
+    font-size: 2.5em;
+}
+
+.Field label {
+      background: transparent;
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+  
+  sup {
+    color: red;
+    top: -2px;
+    font-size: 95%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+    background: transparent;
+  }
+  
+  .regi-input,
+  select {
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    height: 32px;
+    padding: 0 8px;
+  }
+  
+  .Field {
+    position: relative;
+    padding-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    color: white;
+  }
+  
+  .FieldError {
+    position: absolute;
+    bottom: -6px;
+    color: red;
+    font-size: 12px;
+    margin-bottom: 1rem;
+    background: transparent;
+  }
+  
+  .Row {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  #regi-button {
+    padding: 12px;
+    width: 45%;
+    border-radius: 2rem;
+    border: 1px solid #ccc;
+    /* background-color: darkblue; */
+    background: white;
+    color: black;
+    /* position: absolute; */
+    z-index: 10;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    /* cursor: pointer; */
+  }
+
+  #regi-button:hover{
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(45deg, aqua, blue, magenta, red, orange, yellow, green, cyan, blue, violet, cyan, skyblue);
+    background-size: 400% 400%;
+    animation: text_gradient 15s ease infinite;
+    transition: 2s;
+  }
+  
+  button:disabled,
+  button[disabled] {
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+    cursor: not-allowed;
+    transition: 2s;
+  }
+
+
+  .reg-ring {
+    position: relative;
+    width: 45rem;
+    height: 45rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+}
+.reg-ring i {
+    position: absolute;
+    inset: 0;
+    border: 2px solid #fff;
+    transition: 0.5s;
+    
+    background: transparent;
+    /* background: ; */
+}
+.reg-ring i:nth-child(1) {
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    animation: animate 6s linear infinite;
+}
+.reg-ring i:nth-child(2) {
+    border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+    animation: animate 4s linear infinite;
+}
+.reg-ring i:nth-child(3) {
+    border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+    animation: animate2 10s linear infinite;
+}
+.reg-ring:hover i {
+    border: 6px solid var(--clr);
+    filter: drop-shadow(0 0 20px var(--clr));
+}
+
+#reg-form{
+    background: transparent;
+}

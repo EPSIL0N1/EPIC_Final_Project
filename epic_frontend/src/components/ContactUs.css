@@ -1,0 +1,330 @@
+.contactUs-Main-body{
+    background: rgba(0, 0, 0, 0.1);
+}
+
+
+.ContactUs-body{
+    /* min-height: 100vh; */
+    /* background: rgba(0, 0, 0, 0.1); */
+    position: relative;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #222;
+    /* border: 2px solid red; */
+}
+
+.ContactUs-body .Cu-content{
+    max-width: 800px;
+    text-align: center;
+}
+
+.CU-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5rem;
+    /* margin-top: 3rem; */
+    font-family: "Roboto Slab", serif;
+    margin-bottom: 2rem;
+    color: #01dbc2;
+}
+
+.CU-head-para{
+    font-size: 1.5rem;
+    margin: 1rem 2rem;
+    font-family: "Roboto Slab", serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    /* color: #fff; */
+}
+
+.Cu-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background: transparent;
+    margin-top: 30px;
+}
+
+.Cu-contactInfo {
+    background: transparent;
+}
+
+.Cu-container .Cu-contactInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.Cu-container .Cu-contactInfo .cu-box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+    cursor: pointer;
+    background: transparent;
+}
+
+.Cu-container .Cu-contactInfo .cu-box .cu-icon{
+    position: relative;
+    min-width: 60px;
+    height: 60px;
+    background: repeating-conic-gradient(from 27.5deg, #01dbc2 0%, #01dbc2 10%, transparent 10%, transparent 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+
+}
+
+.cu-text {
+    background: transparent;
+}
+
+.Cu-container .Cu-contactInfo .cu-box .cu-icon::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-conic-gradient(from 117.5deg, #01dbc2 0%, #01dbc2 10%, transparent 10%, transparent 50%);
+}
+
+.Cu-container .Cu-contactInfo .cu-box .cu-icon::after{
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: #222;
+}
+
+.Cu-container .Cu-contactInfo .cu-box .cu-icon b{
+    position: absolute;
+    inset: 8px;
+    background: #01dbc2 ;
+    z-index: 2;
+    /* background: transparent; */
+}
+
+
+.cu-text p {
+    background: transparent;
+}
+
+.Cu-container .Cu-contactInfo .cu-box .cu-icon .CU-i{
+    position: relative;
+    z-index: 100;
+    color: #333;
+    background: transparent;
+    font-size: 1.25rem;
+}
+.Cu-container .Cu-contactInfo .cu-box .cu-text{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    font-size: 1.1em;
+    background: transparent;
+    color: white;
+    font-weight: 300;
+}
+.Cu-container .Cu-contactInfo .cu-box .cu-text h3{
+    font-weight: 500;
+    color: #01dbc2;
+    background: transparent;
+    font-family: "Roboto Slab", serif;
+}
+
+.Cu-container .Cu-contactInfo .cu-bottom-txt{
+    color: white;
+    margin-top: 50px;
+    font-weight: 500;
+    border-left: 50px solid #01dbc2;
+    padding-left: 10px;
+    line-height: 1em;
+    background: transparent;
+
+}
+
+.Cu-container .Cu-contactInfo .cu-sci{
+    position: relative;
+    display: flex;
+    gap: 30px;
+    margin: 20px 0;
+    background: transparent;
+}
+
+
+.Cu-container .Cu-contactInfo .cu-sci li{
+    list-style: none;
+    background: transparent;
+}
+
+.Cu-container .Cu-contactInfo .cu-sci li a{
+    color: white;
+    background: transparent;
+    font-size: 1.5em;
+    transition: 0.25s;
+
+}
+
+svg.svg-inline--fa{
+    background: transparent;
+}
+
+.Cu-container .Cu-contactInfo .cu-sci li a:hover{
+    color: #01dbc2;
+    filter: drop-shadow(0 0 5px #01dbc2);
+}
+
+.Cu-container .Cu-contactForm{
+    position: relative;
+    width: 40%;
+    background: repeating-conic-gradient(from var(--a), #01dbc2 0%, #01dbc2 10%, transparent 10%, transparent 50%);
+    animation: animate-CU 6s linear infinite;
+    padding: 60px;
+    
+}
+
+.Cu-container .Cu-contactForm::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-conic-gradient(from var(--a), #01dbc2 0%, #01dbc2 10%, transparent 10%, transparent 50%);
+    animation: animate-CU 6s linear infinite;
+    animation-delay: -1.5s;
+
+}
+
+.Cu-container .Cu-contactForm::after{
+    content: '';
+    position: absolute;
+    inset: 2px;
+    border: 20px solid #222;
+    background: #333;
+}
+
+@property --a
+{
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+@keyframes animate-CU {
+    0%{
+        --a: 0deg;
+    }
+    100%{
+        --a: 360deg;
+    }
+}
+
+.Cu-container .Cu-contactForm form{
+    position: relative;
+    z-index: 10;
+    background: transparent;
+}
+.Cu-container .Cu-contactForm form h2{
+    font-size: 2em;
+    background: transparent;
+    color: white;
+    font-family: "Roboto Slab", serif;
+    font-weight: 500;
+}
+.Cu-container .Cu-contactForm form .cu-inputbox{
+    background: transparent;
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    /* font-family: "Bricolage Grotesque", sans-serif; */
+}
+
+.Cu-container .Cu-contactForm form .cu-inputbox input,
+.Cu-container .Cu-contactForm form .cu-inputbox textarea{
+    width: 100% !important;
+    padding: 5px 0;
+    font-size: 1.1em;
+    margin: 10px 0;
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid #01dbc2;
+    color: white;
+    outline: none;
+    resize: none;
+    font-family: "Times New Roman", cursive;
+    letter-spacing: 0.1rem;
+    
+}
+
+.Cu-container .Cu-contactForm form .cu-inputbox span{
+    position: absolute;
+    left: 0;
+    background: transparent;
+    pointer-events: none;
+    padding: 5px 0;
+    margin: 10px 0;
+    font-size: 1.1em;
+    color: white;
+    transition: 0.5s;
+}
+
+.Cu-container .Cu-contactForm form .cu-inputbox input:focus ~ span,
+.Cu-container .Cu-contactForm form .cu-inputbox textarea:focus ~ span, 
+.Cu-container .Cu-contactForm form .cu-inputbox input:valid ~ span,
+.Cu-container .Cu-contactForm form .cu-inputbox textarea:valid ~ span {
+
+    color: #01dbc2;
+    font-size: 0.9em;
+    transform: translateY(-24px);
+}
+
+.Cu-container .Cu-contactForm form .cu-inputbox input[type="submit"]{
+    width: 100%;
+    background-color: #01dbc2;
+    color: #222;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 1.1em;
+    font-weight: 500;
+    font-family: "Roboto Slab", serif;
+    transition: 1s;
+}
+
+.Cu-container .Cu-contactForm form .cu-inputbox input[type="submit"]:hover{
+    background-color: whitesmoke;
+    letter-spacing: 0.5rem;
+    transition: 1s;
+}
+
+#Cu-attach{
+    background: #01dbc2;
+    border-radius: 2rem;
+    color: white;
+    padding: 0.5rem;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.5s;
+    width: 50%;
+}
+
+#Cu-attach:hover{
+    background-color: #09786b;
+    transition: 0.5s;
+}
+
+.ContactAnimation{
+    /* border: 2px solid green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-Lottie{
+    /* border: 2px solid blue; */
+    height: 25rem;
+    width: 25rem;
+}

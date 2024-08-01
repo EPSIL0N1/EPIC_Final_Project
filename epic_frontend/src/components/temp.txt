@@ -1,0 +1,11 @@
+    "averageCycleLength": 20,
+
+    "dateofHighFertility": "2024-08-17",
+
+    "disease": 0,
+
+    "fertilityRate": 0.5833333333333334,
+
+    "nextMonthStartDate": "2024-09-01", 
+
+    "totalDaysofPain": 3

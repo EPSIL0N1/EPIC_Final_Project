@@ -1,0 +1,87 @@
+.j-container{
+    /* border: 2px solid red; */
+    padding: 3rem;
+    background-color: #983A39;
+    background: linear-gradient(180deg, #000 22%, #983A39 0);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    /* position: static; */
+    /* top: 0; */
+    height: 190vh;
+}
+
+.j-animation{
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0 0.125rem 2.1875rem 0 rgba(219, 7, 7, 0.979);
+}
+
+#j-Lottie{
+    width: 80vw;
+    height: 80vh;
+}
+
+.j-text h1{
+    font-size: 8rem;
+    width: 100%;
+    font-family: "Archivo", sans-serif;
+    font-weight: 850;
+    /* color: #983A39; */
+    margin-bottom: 4rem;
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(180deg, #000 65%, #983A39 0);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.j-text p{
+    font-size: 5rem;
+    font-family: "Zain", sans-serif;
+    font-weight: 600;
+    color: #983A39;
+}
+
+.j-underline
+{
+    margin-right: 1.5rem;
+    /* border-bottom: 1.5px solid #9B2335; */
+    color: black;
+    transition: 0.3s;
+    font-weight: 900;
+}
+
+.j-underline:hover {
+    color: #009B77;
+    transition: 0,3s;
+}
+
+.j-u-animation{
+    position: relative;
+}
+
+.j-u-animation::before{
+    content: "";
+    background-color: #983A39;
+    position: absolute;
+    left: 0;
+    bottom: -0.1rem;
+    height: 3px;
+    width: 0;
+    transition: 0.3s ease-in-out;
+}
+
+
+.j-u-animation:hover::before{
+    content: "";
+    background-color: #983A39;
+    position: absolute;
+    left: 0;
+    bottom: -0.1rem;
+    height: 3px;
+    width: 100%;
+}

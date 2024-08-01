@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fertility Prediction Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .form-group button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Fertility Prediction Form</h1>
+        <form id="predictionForm">
+            <div class="form-group">
+                <label for="start_date">Start Date (YYYY-MM-DD):</label>
+                <input type="date" id="start_date" name="start_date" required>
+            </div>
+            <div class="form-group">
+                <label for="CycleWithPeakorNot">Cycle With Peak or Not:</label>
+                <input type="number" id="CycleWithPeakorNot" name="CycleWithPeakorNot" required>
+            </div>
+            <div class="form-group">
+                <label for="ReproductiveCategory">Reproductive Category:</label>
+                <input type="number" id="ReproductiveCategory" name="ReproductiveCategory" required>
+            </div>
+            <div class="form-group">
+                <label for="LengthofCycle">Length of Cycle:</label>
+                <input type="number" id="LengthofCycle" name="LengthofCycle" required>
+            </div>
+            <div class="form-group">
+                <label for="EstimatedDayofOvulation">Estimated Day of Ovulation:</label>
+                <input type="number" id="EstimatedDayofOvulation" name="EstimatedDayofOvulation" required>
+            </div>
+            <div class="form-group">
+                <label for="FirstDayofHigh">First Day of High:</label>
+                <input type="number" id="FirstDayofHigh" name="FirstDayofHigh" required>
+            </div>
+            <div class="form-group">
+                <label for="TotalNumberofPeakDays">Total Number of Peak Days:</label>
+                <input type="number" id="TotalNumberofPeakDays" name="TotalNumberofPeakDays" required>
+            </div>
+            <div class="form-group">
+                <label for="LengthofMenses">Length of Menses:</label>
+                <input type="number" id="LengthofMenses" name="LengthofMenses" required>
+            </div>
+            <div class="form-group">
+                <label for="IntercourseInFertileWindow">Intercourse In Fertile Window:</label>
+                <input type="number" id="IntercourseInFertileWindow" name="IntercourseInFertileWindow" required>
+            </div>
+            <div class="form-group">
+                <label for="UnusualBleeding">Unusual Bleeding:</label>
+                <input type="number" id="UnusualBleeding" name="UnusualBleeding" required>
+            </div>
+            <div class="form-group">
+                <label for="Age">Age:</label>
+                <input type="number" id="Age" name="Age" required>
+            </div>
+            <div class="form-group">
+                <label for="Height">Height:</label>
+                <input type="number" id="Height" name="Height" required>
+            </div>
+            <div class="form-group">
+                <label for="Weight">Weight:</label>
+                <input type="number" id="Weight" name="Weight" required>
+            </div>
+            <div class="form-group">
+                <label for="Numberpreg">Number of Pregnancies:</label>
+                <input type="number" id="Numberpreg" name="Numberpreg" required>
+            </div>
+            <div class="form-group">
+                <label for="Miscarriages">Miscarriages:</label>
+                <input type="number" id="Miscarriages" name="Miscarriages" required>
+            </div>
+            <div class="form-group">
+                <label for="Medvits">Medications/Vitamins:</label>
+                <input type="number" id="Medvits" name="Medvits" required>
+            </div>
+            <div class="form-group">
+                <label for="Gynosurgeries">Gynecological Surgeries:</label>
+                <input type="number" id="Gynosurgeries" name="Gynosurgeries" required>
+            </div>
+            <div class="form-group">
+                <label for="Urosurgeries">Urological Surgeries:</label>
+                <input type="number" id="Urosurgeries" name="Urosurgeries" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+        <div class="result" id="result"></div>
+    </div>
+    <script>
+        document.getElementById('predictionForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+            const jsonData = {};
+            formData.forEach((value, key) => {
+                jsonData[key] = value;
+            });
+
+            const response = await fetch('/predict', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(jsonData)
+            });
+
+            const result = await response.json();
+            document.getElementById('result').innerText = JSON.stringify(result, null, 2);
+        });
+    </script>
+</body>
+</html>

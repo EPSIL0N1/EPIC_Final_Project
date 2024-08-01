@@ -1,0 +1,66 @@
+/* .Report-container{
+    border: 2px solid red;
+} */
+.r-heading{
+    /* border: 2px solid green; */
+    text-align: center;
+    font-family: "Zain", sans-serif;
+    font-size: 2rem;
+    padding-bottom: 2rem;
+    color: #983A39;
+}
+
+.r-sub-form{
+    /* border: 2px solid blue; */
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 2rem;
+}
+
+.sub-form-box{
+    border: 1px solid #983A39;
+    box-shadow: 0 0.125rem 2.1875rem 0 rgba(243, 63, 114, 0.3);
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+.sub-form-box-heading{
+    font-family: "Zain", sans-serif;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.sub-form-box-p{
+    font-family: "Lato", sans-serif;
+    margin-bottom: 1rem;
+}
+
+.sub-form-checkbox{
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3rem;
+}
+
+.sub-form-subCheckbox-option{
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+}
+
+.sub-form-checkbox input{
+    height: 1.5rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    color: #983A39;
+}
+
+.user-form-Button{
+    /* border: 2px solid #983A39; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    margin: 1rem;
+}

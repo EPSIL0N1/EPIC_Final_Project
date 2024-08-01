@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Zain:wght@200;300;400;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.min.js"></script>
+    <title>Bloom Circle{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>Bloom Circle
+        <video class="background-video" src="{{ url_for('static', filename='period-woman-dance-unscreen.mp4') }}" autoplay loop muted></video>
+        </h1>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <!-- <footer>
+        <p>&copy; 2024 Bloom Circle</p>
+    </footer> -->
+    <div class="background">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</body>
+</html>

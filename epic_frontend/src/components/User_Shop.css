@@ -1,0 +1,129 @@
+.user-shop-card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background: #09161d; */
+    gap: 8rem;
+}
+
+.user-card{
+    position: relative;
+    width: 320px;
+    height: 420px;
+    background: #983A39;
+    border-radius: 2rem;
+    overflow: hidden;
+
+}
+
+.user-card::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    width: 100%;
+    height: 100%;
+    background: #E4D6F5;
+    transform: skewY(345deg);
+    transition: 0.5s;
+}
+
+.user-card:hover::before{
+    top: -70%;
+    transform: skewY(390deg);
+}
+
+.user-card::after{
+    content: 'EPIC';
+    font-family: "Zain", sans-serif;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-weight: 600;
+    font-size: 8em;
+    color: rgba(0,0,0,0.1);
+}
+
+.user-card .user-card-imgbx{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 1;
+    background: transparent;
+}
+
+.user-card .user-card-imgbx img{
+    max-width: var(--wid);
+    transition: 0.5s;
+    background: transparent;
+    
+}
+
+.user-card:hover .user-card-imgbx img{
+    max-width: var(--widhover);
+}
+
+.user-card .user-card-contentBx{
+    position: relative;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+    background: transparent;
+}
+
+.user-card .user-card-contentBx h3{
+    font-size: 1.3rem;
+    color: white;
+    background: transparent;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: "Lato", sans-serif;
+}
+
+.user-card .user-card-contentBx .user-card-price{
+    font-size: 1.7rem;
+    color: white;
+    background: transparent;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-family: "Zain", sans-serif;
+}
+
+#small-bg-transparent{
+    background: transparent;
+}
+
+.user-card .user-card-contentBx .user-card-buy{
+    position: relative;
+    top: 200px;
+    opacity: 0;
+    padding: 10px 30px;
+    margin-top: 15px;
+    color: #983A39;
+    background: transparent;
+    text-decoration: none;
+    background: #E4D6F5;
+    border-radius: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    font-weight: 600;
+    font-family: "Zain", sans-serif;
+}
+
+.user-card:hover .user-card-contentBx .user-card-buy{
+    top: 0;
+    opacity: 1;
+
+}
+.user-card:hover .user-card-contentBx .user-card-buy:hover{
+    background: black;
+    color: white;
+}

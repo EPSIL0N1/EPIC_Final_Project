@@ -1,0 +1,366 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+/* Body Styling */
+body {
+    font-family: "Zain", sans-serif;
+    background-color: #953998;
+    margin: 0;
+    padding: 20;
+    overflow-x: hidden;
+}
+
+/* Header Styling */
+header {
+    background-color: white; /* Light pink */
+    color: #983A39;
+    text-align: center;
+    padding: 5px;
+    font-size: 24px;
+    /* border-bottom: 5px solid #ff99cc; */
+    font-family: 'Pacifico', cursive;
+    position: relative;
+    z-index: 2;
+}
+
+/* Footer Styling */
+/* footer {
+    background-color: #382107;
+    color: white;
+    text-align: center;
+    padding: 3px 0;
+    position: fixed;
+    width: 500%;
+    bottom: 0;
+    border-top: 5px solid #2e0b1d;
+    font-style: italic;
+    z-index: 2;
+} */
+
+.room-list {
+    float: left;
+    width: 180px;
+    background-color: #ffccdd;
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.room-list h3 {
+    font-family: 'Pacifico', cursive;
+    color: #ff66b2;
+    text-align: center;
+}
+
+.room-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.room-list li {
+    padding: 10px;
+    cursor: pointer;
+    font-family: 'Arial', sans-serif;
+    color: #ff66b2;
+    margin: 5px 0;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.room-list li:hover {
+    background-color: #ffe6f2;
+    transform: scale(1.05);
+    border-radius: 5px;
+}
+
+.home-container, .chat-container {
+    margin-left: 180px;
+    padding: 20px;
+}
+
+.room-header {
+    font-family: 'Pacifico', cursive;
+    color: #ff66b2;
+    margin-bottom: 20px;
+}
+
+.room-header h2 {
+    font-size: 1.5em;
+}
+
+.room-header h3 {
+    font-size: 1.2em;
+}
+
+/* Modal Overlay Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* Modal Content Styling */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Close Button Styling */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal Form Styling */
+.modal form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Modal Input Styling */
+.modal input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Modal Button Styling */
+.modal button {
+    background-color: #361807;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Pacifico', cursive;
+}
+
+.modal button:hover {
+    background-color: #180b03;
+}
+
+
+/* Main Content Styling */
+main {
+    padding: 2px 2px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Form Styling */
+form {
+    background-color: white;
+    padding: 30px;
+    padding-right: 3%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    margin: 20px auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* Label Styling */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Input Styling */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Button Styling */
+button {
+    background-color: #361807;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 16px;
+    font-family: 'Pacifico', cursive;
+}
+
+button:hover {
+    background-color: #180b03;
+    z-index: 5;
+}
+
+/* Message Box Styling */
+#messages {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    height: 300px;
+    overflow-y: scroll;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Message Form Styling */
+#message-form {
+    display: flex;
+    margin-top: 20px;
+}
+
+#message-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#message-form button {
+    flex-shrink: 0;
+}
+
+/* Video Styling */
+.background-video {
+    width: 20vw;
+    height: 20vh;
+    object-fit: contain;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    /* opacity: 0.6; */
+    /* filter: brightness(0.8) sepia(1) hue-rotate(289deg) saturate(3); */
+}
+
+/* Background Animation */
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #983A39;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.background span {
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 10s linear infinite;
+    bottom: -150px;
+}
+
+.background span:nth-child(1) {
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-duration: 17s;
+}
+
+.background span:nth-child(2) {
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-duration: 12s;
+    animation-delay: 2s;
+}
+
+.background span:nth-child(3) {
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-duration: 10s;
+    animation: animate 20s linear infinite;
+    animation-delay: 4s;
+}
+
+.background span:nth-child(4) {
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-duration: 15s;
+    animation-delay: 6s;
+}
+
+.background span:nth-child(5) {
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-duration: 8s;
+    animation-delay: 8s;
+}
+
+.background span:nth-child(6) {
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-duration: 20s;
+    animation-delay: 3s;
+}
+
+.background span:nth-child(7) {
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-duration: 25s;
+    animation: animate 20s linear infinite;
+    animation-delay: 7s;
+}
+
+.background span:nth-child(8) {
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-duration: 15s;
+    animation-delay: 15s;
+}
+
+
+
+@keyframes animate {
+    0% {
+        transform: translateY(0) rotate(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-800px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.room-header h2, .room-header h3 {
+    font-family: "Zain", sans-serif;;
+    color: #4e0e0e;
+}

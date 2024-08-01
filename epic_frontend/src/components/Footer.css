@@ -1,0 +1,111 @@
+.footer-container{
+    /* border: 2px solid red; */
+    overflow: hidden;
+}
+
+.f-sub-container{
+    /* border: 2px solid green; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: gainsboro; */
+    background-color: #3BDCE5;
+    gap: 5rem;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+}
+
+.f-social, .f-quickLinks, .f-Services{
+    /* border: 2px solid yellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: transparent;
+}
+
+.f-sub-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    padding: 1rem;
+    font-family: "Roboto Slab", serif;
+    font-size: 1.8rem;
+    color: white;
+    border-bottom: 1px solid black;
+}
+
+.f-sub-para{
+    background: transparent;
+    font-family: "Zain", sans-serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.f-sub-para:hover{
+    color: white;
+    /* transition: 1s; */
+}
+
+.f-byPragati{
+    /* border: 2px solid red; */
+    font-family: "Zain", sans-serif;
+    font-weight: 600;
+    font-size: 1.6rem;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10rem;
+    color: #983A39;
+    background: rgb(217, 216, 216);
+}
+
+.f-sub-pragati{
+    background: transparent;
+}
+
+.f-byPragati i{
+    background: transparent;
+    font-size: 1.2rem;
+}
+
+.f-video{
+    border: 2px solid white;
+    border-radius: 2rem;
+    height: 20rem;
+    width: 35rem;
+    background: transparent;
+}
+
+.f-marquee{
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* gap: 10rem; */
+    background-color: transparent;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 100%;
+    background: rgb(217, 216, 216);
+    border-top: 1px solid black;
+}
+
+.f-marquee h1{
+    color: black;
+    background-color: transparent;
+    font-size: 24vw;
+    line-height: 1;
+    font-family: "Archivo", sans-serif;
+    font-weight: 850;
+    /* padding-top: 3px; */
+    /* margin-top: -25px; */
+    /* margin-bottom: -31px; */
+    padding-right: 5rem;
+}

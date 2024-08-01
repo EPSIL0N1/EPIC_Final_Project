@@ -1,0 +1,303 @@
+.user-calendar-main-container{
+    /* border: 2px solid yellow; */
+    margin-top: 4rem;
+}
+
+.calendar-container{
+    /* height: 100%; */
+    width: 100%;
+    /* background: #983A39; */
+    padding-top: 8rem;
+    height: 100vh;
+    /* border: 2px solid black; */
+    border-bottom-left-radius: 50% ;
+    border-bottom-right-radius: 50%;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    /* position: sticky; */
+    /* top: 0; */
+    background: linear-gradient(180deg, white 30%, #b05e5c 0);
+    
+}
+
+.rbc-event-content{
+    color: black;
+    font-family: "Zain", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+
+/* .rbc-toolbar{
+    border: 2px solid red;
+    margin-bottom: 2rem !important;
+    border-radius: 2rem;
+    overflow: hidden;
+} */
+
+.react-datepicker-wrapper{
+    margin-left: 5rem;
+}
+
+/* This is the Main Calendar body -> */
+.rbc-calendar{
+    border: 2px solid #983A39;
+    height: 35rem !important;
+    width: 65rem;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0 0.125rem 2.1875rem 0 rgba(243, 63, 114, 0.5);
+}
+/* 
+.rbc-event{
+    background-color: #983A39 !important;
+} */
+
+/* This is calendar title */
+.rbc-toolbar-label{
+    font-family: "Zain", sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    color: #983A39;
+}
+
+.cal-add-date{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 7rem;
+    height: 50vh;
+}
+
+.add-period-date{
+    /* border: 2px solid green; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35rem;
+}
+
+
+.add-period-sub{
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    height: 10rem;
+    border: 2px solid #983A39;
+    border-radius: 2rem;
+    box-shadow: 0 0.125rem 2.1875rem 0 rgba(243, 63, 114, 0.5);
+}
+
+
+/* This is to add period start and end date */
+.react-datepicker__input-container input{
+    text-align: center;
+    height: 10rem;
+    border-radius: 100%;
+    color: #983A39;
+    border: 2px solid #983A39;
+    box-shadow: 0 0.125rem 2.1875rem 0 rgba(243, 63, 114, 0.5);
+}
+
+.react-datepicker-wrapper{
+    margin: 0 !important;
+}
+
+.add-period-date-heading{
+    /* border: 2px solid blue; */
+    /* flex-direction: column; */
+    font-family: "Zain", sans-serif;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-weight: 600;
+}
+
+
+.user-calendar-banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+    /* border: 2px solid blue; */
+    padding: 2rem;
+    /* position: sticky; */
+    /* top: 0; */
+    height: 39vh;
+    padding-top: 11rem;
+}
+
+.user-cal-ani{
+    height: 50vh;
+    width: 27vw;
+    /* border: 2px solid green; */
+}
+
+.user-banner-header{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: 4rem;
+    font-family: "Zain", sans-serif;
+    font-weight: 600;
+    /* border: 2px solid blue; */
+    padding: 1rem;
+    color: #983A39;
+}
+
+.user-banner-p{
+    font-size: 1.8rem;
+    text-align: center;
+    font-family: "Zain", sans-serif;
+    color: black;
+}
+
+.period-date-addButton{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -5rem;
+    
+}
+
+.Button-water-hover-effect{
+    padding: 1rem;
+    border-radius: 3rem;
+    font-family: "Zain", sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    width: 15rem;
+    cursor: pointer;
+    border: 2px solid black;
+    box-shadow: 0 0.125rem 2.1875rem 0 rgba(63, 243, 192, 0.8);
+    transition: 0.5s
+}
+
+.Button-water-hover-effect:hover{
+    box-shadow: 0 0.125rem 2.1875rem 0 rgb(5, 14, 138);
+    border-color: #00aeff;
+    transition: 0.5s;
+}
+
+.Button-water-hover-effect{
+    position: relative;
+    display: block;
+    align-items: center;
+    overflow: hidden;
+    padding: 10px 30px;
+    border-radius: 20px;
+}
+
+.Button-water-hover-effect span{
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    transition: 1.5s;
+}
+
+.Button-water-hover-effect .wave{
+    position: absolute;
+    top: calc(100% + 22px);
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00aeff;
+    transition: 1.5s;
+}
+
+.Button-water-hover-effect:hover .wave{
+    top: 0;
+    /* color: white */
+}
+
+.Button-water-hover-effect .wave:before{
+    content: '';
+    position: absolute;
+    top: -22px;
+    left: 0;
+    width: 100%;
+    height: 22px;
+    background: url(../assets/epic_images/wave.png);
+    animation: animate-nav 0.5s linear infinite;
+}
+
+@keyframes animate-nav {
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: 118px;
+    }
+}
+
+.user-pred{
+    /* border: 2px solid red; */
+    margin-top: 35rem;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 10rem;
+    /* padding-bottom: 5rem; */
+}
+
+.user-pred-sub{
+    /* border: 2px solid blue; */
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    /* justify-content: center; */
+    align-items: center;
+    gap: 3rem;
+    
+}
+
+.user-pred-heading{
+    font-family: "Zain", sans-serif;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+.p-report{
+    margin: auto;
+    border: 1px solid black;
+    box-shadow: 0 0.125rem 2.1875rem 0 rgba(63, 243, 192, 0.5);
+    border-radius: 3rem;
+    padding: 2rem;
+    display: flex;
+    align-items: first baseline;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.p-report-sub{
+    /* border: 2px solid yellow; */
+    font-size: 2.5rem;
+    font-family: "Lato", sans-serif;
+    
+}
+
+.p-report-sub-heading{
+    color: #983A39;
+    font-size: 3rem;
+    font-family: "Zain", sans-serif;
+    font-weight: 600;
+}
+
+.p-report i{
+    font-size: 3rem;
+    color: #983A39;
+}

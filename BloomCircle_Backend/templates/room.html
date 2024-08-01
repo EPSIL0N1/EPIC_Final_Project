@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block title %}Room {{ room }} - Blooming{% endblock %}
+
+{% block content %}
+<div class="room-list">
+    <h3>Rooms</h3>
+    <ul>
+        <li><a href="{{ url_for('room', room_name='DocConnect') }}">🌐 DocConnect</a></li>
+        <li><a href="{{ url_for('room', room_name='TalkingTales') }}">📚 TalkingTales</a></li>
+        <li><a href="{{ url_for('room', room_name='MenstroUpdate') }}">🔔 MenstroUpdate</a></li>
+        <li><a href="{{ url_for('room', room_name='GurlTime') }}">🌸 GurlTime</a></li>
+    </ul>
+</div>
+
+<div class="chat-container">
+    <div class="room-header">
+        <h2>Room {{ room }}</h2>
+        <h3>Username: {{ username }}</h3>
+    </div>
+    <div id="messages"></div>
+    <form id="message-form">
+        <input type="text" id="message-input" placeholder="Enter your message">
+        <button type="submit">Send</button>
+    </form>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.min.js"></script>
+<script>
+    const socket = io();
+    const room = "{{ room }}";
+    const username = "{{ username }}";
+
+    socket.emit("join", {room: room, username: username});
+
+    // Load pre-populated messages
+    const messages = JSON.parse('{{ messages | tojson | safe }}');
+    messages.forEach(data => {
+        const msg = document.createElement("p");
+        msg.innerHTML = `<i class="fas fa-user"></i> ${data.username}: ${data.msg}`;
+        document.getElementById("messages").appendChild(msg);
+    });
+
+    socket.on("message", data => {
+        const msg = document.createElement("p");
+        msg.innerHTML = `<i class="fas fa-user"></i> ${data.username}: ${data.msg}`;
+        document.getElementById("messages").appendChild(msg);
+    });
+
+    socket.on("user_joined", data => {
+        const msg = document.createElement("p");
+        msg.innerHTML = `<i class="fas fa-user-plus"></i> ${data.username} has joined the room.`;
+        document.getElementById("messages").appendChild(msg);
+    });
+
+    document.getElementById("message-form").addEventListener("submit", event => {
+        event.preventDefault();
+        const message = document.getElementById("message-input").value;
+        socket.emit("message", {msg: message, room: room, username: username});
+        document.getElementById("message-input").value = "";
+    });
+
+    window.onbeforeunload = () => {
+        socket.emit("leave", {room: room, username: username});
+    };
+
+    function switchRoom(newRoom) {
+    const formData = new FormData();
+    formData.append("username", "{{ username }}");
+    formData.append("room", newRoom);
+
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", "/join_room", true);
+    xhr.send(formData);
+}
+
+</script>
+{% endblock %}

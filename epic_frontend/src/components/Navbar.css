@@ -1,0 +1,71 @@
+.Nav_Container{
+    /* border: 2px solid green; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4rem;
+    margin-top: 1rem;
+}
+
+.Nav_logo{
+    /* border: 2px solid red; */
+    text-decoration: none;
+    font-family: "Playwrite PE", cursive;
+    font-size: 2rem;
+    margin-left: 3rem;
+    font-weight: 600;
+    /* font-optical-sizing: auto; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* border: 2px solid green; */
+    text-align: center;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    /* line-height: 1; */
+    background-image: linear-gradient(45deg, aqua, blue, magenta, red, orange, yellow, green, cyan, blue, violet, cyan, skyblue);
+    background-size: 400% 400%;
+    animation: text_gradient 15s ease infinite;
+    margin-right: 57rem;
+    padding-bottom: 1rem;
+}
+
+@keyframes text_gradient {
+    0%{
+        background-position: 0 0;
+    }
+    25%{
+        background-position: 100% 0;
+    }
+    50%{
+        background-position: 100% 100%;
+    }
+    75%{
+        background-position: 0 100%;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
+
+.nav_extra{
+    font-family: "Zain", sans-serif;
+    font-weight: 600;
+    transition: 2s;
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: black;
+}
+
+.nav_extra:hover{
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    /* line-height: 1; */
+    background-image: linear-gradient(45deg, aqua, blue, magenta, red, orange, yellow, green, cyan, blue, violet, cyan, skyblue);
+    background-size: 400% 400%;
+    animation: text_gradient 15s ease infinite;
+    /* border-bottom: 1px solid black; */
+    transition: 2s;
+}
